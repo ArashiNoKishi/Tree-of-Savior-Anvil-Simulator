@@ -22,39 +22,42 @@
   <button (click)="reset()" class="button">Reset</button><br>
   <input type="checkbox" [(ngModel)]="stats"> stats
 </div>
-<div *ngIf="!stats" class="msgDiv">
-  <table class="tableDiv">
-    <thead>
-      <th class="tableHeader">Weapon</th>
-      <th class="tableHeader">Ench</th>
-      <th class="tableHeader">Pot</th>
-    </thead>
-    <tbody>
-    <tr *ngFor="let weap of weapons, let i = index">
-      <td>{{i+1}}</td>
-      <td>+{{weap.enhancement}}</td>
-      <td>{{weap.potential}}/{{weap.basePotential}}</td>
-    </tr>
-    </tbody>
-  </table>
-</div>
-<div *ngIf="stats" class="msgDiv">
-  <table class="tableDiv">
-    <thead>
-      <th class="tableHeader">Ench</th>
-      <th class="tableHeader">Count</th>
-      <th class="tableHeader">Rate</th>
-    </thead>
-    <tbody>
-    <tr *ngFor="let rate of rates">
-      <td>+{{rate.enhance}}</td>
-      <td>{{rate.weaps.length}}</td>
-      <td>{{(rate.weaps.length/weapons.length*100).toFixed(2)}}%</td>
-    </tr>
-    <tr>
-      <th class="tableFooter">Total:</th>
-      <th class="tableFooter lastRow" colspan="2">{{weapons.length}}</th>
-    </tr>
-    </tbody>
-  </table>
+<div *ngIf="weapons.length || rates.length">
+  <h3>{{rates?'Enhancement Rates':'Weapon List'}}!</h3>
+  <div *ngIf="!stats" class="msgDiv">
+    <table class="tableDiv">
+      <thead>
+        <th class="tableHeader">Weapon</th>
+        <th class="tableHeader">Ench</th>
+        <th class="tableHeader">Pot</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let weap of weapons, let i = index">
+        <td>{{i+1}}</td>
+        <td>+{{weap.enhancement}}</td>
+        <td>{{weap.potential}}/{{weap.basePotential}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <div *ngIf="stats" class="msgDiv">
+    <table class="tableDiv">
+      <thead>
+        <th class="tableHeader">Ench</th>
+        <th class="tableHeader">Count</th>
+        <th class="tableHeader">Rate</th>
+      </thead>
+      <tbody>
+      <tr *ngFor="let rate of rates">
+        <td>+{{rate.enhance}}</td>
+        <td>{{rate.weaps.length}}</td>
+        <td>{{(rate.weaps.length/weapons.length*100).toFixed(2)}}%</td>
+      </tr>
+      <tr>
+        <th class="tableFooter">Total:</th>
+        <th class="tableFooter lastRow" colspan="2">{{weapons.length}}</th>
+      </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
