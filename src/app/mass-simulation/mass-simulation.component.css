@@ -22,7 +22,6 @@
 
 :host .msgDiv {
   border: 1px black solid;
-  border-top: 0;
   max-height: 203px;
   overflow-y: scroll;
   background: #7790ac;
@@ -48,10 +47,4 @@
 
 :host .lastRow {
   text-align: left;
-}
-
-:host .msgDiv table tbody tr{
-  border: 1px black solid;
-  border-top: 0;
-  background: #7790ac;
 }
