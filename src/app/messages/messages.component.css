@@ -1,0 +1,10 @@
+:host .msgDiv .msgs{
+  border: 1px black solid;
+  height: 200px;
+  overflow-y: scroll;
+  background: #7790ac;
+}
+
+:host h2 {
+  margin: 10px
+}

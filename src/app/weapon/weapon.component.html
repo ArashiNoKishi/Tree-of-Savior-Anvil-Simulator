@@ -1,0 +1,33 @@
+<div class="rootDiv">
+	<div>
+		<label>Base Potential:
+        <input [(ngModel)]="weapon.basePotential" 
+        (keyup)="updatePot($event)" placeholder="Potential" class="inputFld">
+      </label>
+	</div>
+	<div>
+		<span>Restrictions: <br>
+      <label>Lowest potential: 
+        <input [(ngModel)]="restrict.minPot" placeholder="Lowest potential" class="inputFld">
+      </label><br>
+      <label>Target enhancement: 
+        <input [(ngModel)]="restrict.maxEnhc" placeholder="Targeted enhance" class="inputFld">
+      </label>
+    </span>
+	</div>
+	<button class="button" (click)="enhance()">Enhance</button>
+	<button class="button" (click)="enhanceTo()">Enhance until {{restrict.minPot}} pot</button>
+	<button class="button" (click)="diamond()">Diamond</button>
+	<button *ngIf="weapon.potential === 0" class="button" (click)="gold()">Gold</button>
+	<button class="button" (click)="reset()">Reset</button>
+
+	<div>
+		<br>
+		<span>Status:</span>
+		<span *ngIf="weapon.potential<0">Broken at +{{weapon.enhancement+1}}</span>
+		<span *ngIf="weapon.potential>-1">
+      pot: {{weapon.potential}}/{{weapon.basePotential}}, enhc: +{{weapon.enhancement}}
+    </span>
+	</div>
+</div>
+<app-messages></app-messages>

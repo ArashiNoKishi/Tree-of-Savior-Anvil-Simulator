@@ -1,0 +1,57 @@
+:host .rootDiv {
+  border: 1px black solid;
+  padding: 10px;
+  background: #7790ac
+}
+
+:host .rootDiv .inputFld {
+  width: 20px;
+  padding: 0 2px 0 0;
+  text-align: right;
+}
+
+:host .rootDiv .inputAmount {
+  width: 50px;
+  padding: 0 2px 0 0;
+  text-align: right;
+}
+
+:host .rootDiv .button {
+  padding: 2px 5px;
+}
+
+:host .msgDiv {
+  border: 1px black solid;
+  border-top: 0;
+  max-height: 203px;
+  overflow-y: scroll;
+  background: #7790ac;
+}
+
+:host .tableDiv {
+  position: relative;
+}
+
+:host .tableHeader {
+  position: sticky;
+  top: 0px;
+  color: whitesmoke;
+  background: #7790ac;
+}
+
+:host .tableFooter {
+  position: sticky;
+  bottom: 0px;
+  color: whitesmoke;
+  background: #7790ac;
+}
+
+:host .lastRow {
+  text-align: left;
+}
+
+:host .msgDiv table tbody tr{
+  border: 1px black solid;
+  border-top: 0;
+  background: #7790ac;
+}
