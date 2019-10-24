@@ -23,7 +23,7 @@
   <input type="checkbox" [(ngModel)]="stats"> stats
 </div>
 <div *ngIf="weapons.length || rates.length">
-  <h3>{{rates?'Enhancement Rates':'Weapon List'}}!</h3>
+  <h3>{{stats?'Enhancement Rates':'Weapon List'}}!</h3>
   <div *ngIf="!stats" class="msgDiv">
     <table class="tableDiv">
       <thead>
