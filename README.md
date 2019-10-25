@@ -3,7 +3,7 @@
 This app will help you simulate the Tree of Savior anvil using its chance rate and fail mechanics.
 
 ### Rates
-Anvil success rates varies depending on the enhancement level of the equipment tha is being enhanced, and it's as follows:
+Anvil success rates varies depending on the enhancement level of the equipment that is being enhanced, and it's as follows:
 -  `100%`rate on enhances on +0 until +4.
 - `88%` on +5.
 - `78%` on +6.
