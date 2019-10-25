@@ -23,13 +23,13 @@
   <input type="checkbox" [(ngModel)]="stats"> stats
 </div>
 <div *ngIf="weapons.length || rates.length">
-  <h3>{{stats?'Enhancement Rates':'Weapon List'}}!</h3>
+  <h3>{{stats?'Enhancement Rates':'Equipment List'}}!</h3>
   <div *ngIf="!stats" class="msgDiv">
     <table class="tableDiv">
       <thead>
-        <th class="tableHeader">Weapon</th>
-        <th class="tableHeader">Ench</th>
-        <th class="tableHeader">Pot</th>
+        <th class="tableHeader">Equipment</th>
+        <th class="tableHeader">Enchance level</th>
+        <th class="tableHeader">Potential</th>
       </thead>
       <tbody>
       <tr *ngFor="let weap of weapons, let i = index">
@@ -43,7 +43,7 @@
   <div *ngIf="stats" class="msgDiv">
     <table class="tableDiv">
       <thead>
-        <th class="tableHeader">Ench</th>
+        <th class="tableHeader">Enchance</th>
         <th class="tableHeader">Count</th>
         <th class="tableHeader">Rate</th>
       </thead>

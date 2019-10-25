@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  @Input() name = 'Weapon Enhance simulator';
+  @Input() name = 'Equipment Enhance simulator';
 }
