@@ -16,6 +16,7 @@ export class IchorComponent implements OnInit {
     ichored: false
   };
   @Input() restrict: Restrictions = { minPot: 0, maxEnhc: 40 };
+  goldCount: number = 0;
 
   constructor(
     private ichor: IchorService,
@@ -34,6 +35,7 @@ export class IchorComponent implements OnInit {
     this.messages.clear();
     this.weapon.potential = this.weapon.basePotential;
     this.weapon.ichored = false;
+    this.goldCount = 0;
   }
 
   ichorEq(): void {
@@ -41,13 +43,20 @@ export class IchorComponent implements OnInit {
   }
 
   gold(): void {
-    this.ichor.gold(this.weapon);
+    if (!this.weapon.ichored){
+      this.ichor.gold(this.weapon);
+      this.goldCount++;
+    }
   }
 
   ichorTo(): void {
     let pot = this.restrict.minPot ? this.restrict.minPot : 0;
-    let enhc = this.restrict.maxEnhc ? this.restrict.maxEnhc : 0;
-    this.ichor.ichorTo(this.weapon, pot, enhc);
+    this.ichor.ichorTo(this.weapon, pot);
+  }
+
+  ichorToWG(): void {
+    let pot = this.restrict.minPot ? this.restrict.minPot : 0;
+    this.goldCount = this.ichor.ichorToWG(this.weapon, pot).goldCount;
   }
 
 }

@@ -14,6 +14,7 @@
 	</div>
 	<button class="button" (click)="ichorEq()">Ichor</button>
 	<button class="button" (click)="ichorTo()">Ichor until {{restrict.minPot}} pot</button>
+	<button class="button" (click)="ichorToWG()">Ichor until success</button>
 	<button class="button" (click)="reset()">Reset</button>
   <button *ngIf="weapon.potential === 0" class="button" (click)="gold()">Gold</button>
   <div>
@@ -24,6 +25,9 @@
     </span>
 		<span *ngIf="weapon.ichored">
       Ichored
+    </span>
+		<span *ngIf="goldCount">
+      | Gold kit: {{goldCount}}
     </span>
 	</div>
 </div>
