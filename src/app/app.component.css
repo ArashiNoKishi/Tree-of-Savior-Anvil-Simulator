@@ -1,5 +1,6 @@
 nav {
   background-color: #85a0c0;
+  margin: auto;
 }
 
 h2 {
@@ -7,7 +8,7 @@ h2 {
 }
 
 a {
-  padding: 10px;
+  padding: 0 2px;
   text-decoration: none;
   color: whitesmoke
 }

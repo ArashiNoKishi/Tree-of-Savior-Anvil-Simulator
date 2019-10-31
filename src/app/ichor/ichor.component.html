@@ -12,9 +12,19 @@
       </label><br>
     </span>
 	</div>
-	<button class="button" (click)="ichor()">Ichor</button>
+	<button class="button" (click)="ichorEq()">Ichor</button>
 	<button class="button" (click)="ichorTo()">Ichor until {{restrict.minPot}} pot</button>
-  <button *ngIf="weapon.potential === 0" class="button" (click)="gold()">Gold</button>
 	<button class="button" (click)="reset()">Reset</button>
+  <button *ngIf="weapon.potential === 0" class="button" (click)="gold()">Gold</button>
+  <div>
+		<br>
+		<span>Status:</span>
+		<span *ngIf="!weapon.ichored">
+      {{weapon.potential<0?"Broken":"Not Ichored"}}
+    </span>
+		<span *ngIf="weapon.ichored">
+      Ichored
+    </span>
+	</div>
 </div>
 <app-messages></app-messages>

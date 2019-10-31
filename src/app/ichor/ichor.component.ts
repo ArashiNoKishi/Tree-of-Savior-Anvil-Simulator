@@ -13,7 +13,7 @@ export class IchorComponent implements OnInit {
   @Input() weapon: Weapon = {
     basePotential: 10,
     potential: 10,
-    enhancement: 0
+    ichored: false
   };
   @Input() restrict: Restrictions = { minPot: 0, maxEnhc: 40 };
 
@@ -23,14 +23,20 @@ export class IchorComponent implements OnInit {
   ) {}
 
   ngOnInit() {
+    this.reset();
+  }
+
+  updatePot(event): void {
+    this.weapon.potential = parseInt(event.target.value);
   }
 
   reset(): void {
     this.messages.clear();
     this.weapon.potential = this.weapon.basePotential;
+    this.weapon.ichored = false;
   }
 
-  ichor(): void {
+  ichorEq(): void {
     this.ichor.ichor(this.weapon);
   }
 
