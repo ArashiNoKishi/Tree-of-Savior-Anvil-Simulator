@@ -15,7 +15,7 @@ If an enhancement fails the equipment loses `1` level of enhancement and `1` pot
 ##### Diamond Anvil
 When using this anvil to enhance an equipment it won't lose an enhancement level if it fails.
 ##### Gold anvil
-This anvil can only be used to enhance equipment that has `0` potential, and it won't be destroyed if it fails, however if the quipment had an enhancement level of `+12` or higher it will be lowered to `+10`.
+This anvil can only be used to enhance equipment that has `0` potential, and it won't be destroyed if it fails, however if the equipment had an enhancement level of `+12` or higher it will be lowered to `+10`.
 
 These are the features:
 
