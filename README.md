@@ -34,4 +34,10 @@ Legendary gear can equip `Ichors` to gain additional substats, these are extrate
 
 Legendary equipment from Legendary Raids (Velcoffer, Skiaclipse Legend) can equip 2 Ichors but only 1 of each type, on the other hand legendary unidentified gear (Savinose) can only equip a `Fixed stat` ichor as it already has `Random stats` when appraised.
 
-When Ichoring gear, each try has a `5%` success rate and the equipment is consumed (converted into the Ichor), when it fails the equipment loses `1` potential, and if it fails at `0` potential the equipment is destroyed.
+When doing `Ichor` on gear, each try has a `5%` success rate and the equipment is consumed (converted into the Ichor), when it fails the equipment loses `1` potential, and if it fails at `0` potential the equipment is destroyed.
+
+The auto Ichor option takes the `Lowest potential` restriction and tries to ichor the equipment until it gets to that potential.
+
+The `Gold` ichor kit can only be used when the equipment is at `0` potential and just like the golden anvil it won't destroy the equipment if it fails to ichor it. This option tracks how many golden kits were used so far.
+
+The `Ichor until success` option will try to ichor the equipment until it successfully gets ichored, it will autoswap to using golden kits when the equipment reaches `0` potential and will keep track on how many kits were used in total.
