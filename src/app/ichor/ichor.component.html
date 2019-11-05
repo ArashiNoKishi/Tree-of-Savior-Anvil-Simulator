@@ -1,0 +1,34 @@
+<div class="rootDiv">
+	<div>
+		<label>Base Potential:
+        <input [(ngModel)]="weapon.basePotential" 
+        (keyup)="updatePot($event)" placeholder="Potential" class="inputFld">
+      </label>
+	</div>
+	<div>
+		<span>Restrictions: <br>
+      <label>Lowest potential: 
+        <input [(ngModel)]="restrict.minPot" placeholder="Lowest potential" class="inputFld">
+      </label><br>
+    </span>
+	</div>
+	<button class="button" (click)="ichorEq()">Ichor</button>
+	<button class="button" (click)="ichorTo()">Ichor until {{restrict.minPot}} pot</button>
+	<button class="button" (click)="ichorToWG()">Ichor until success</button>
+	<button class="button" (click)="reset()">Reset</button>
+  <button *ngIf="weapon.potential === 0" class="button" (click)="gold()">Gold</button>
+  <div>
+		<br>
+		<span>Status:</span>
+		<span *ngIf="!weapon.ichored">
+      {{weapon.potential<0?"Broken":"Not Ichored"}}
+    </span>
+		<span *ngIf="weapon.ichored">
+      Ichored
+    </span>
+		<span *ngIf="goldCount">
+      | Gold kit: {{goldCount}}
+    </span>
+	</div>
+</div>
+<app-messages></app-messages>
