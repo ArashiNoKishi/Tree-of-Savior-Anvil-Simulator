@@ -44,7 +44,7 @@ export class IchorService {
     return weap;
   }
 
-  ichorToWG(weap: Weapon, pot: number): Weapon {
+  ichorToWG(weap: Weapon, pot: number): any {
     let tempWeap = weap;
     let goldCount = 0;
     while (tempWeap.potential > pot && !tempWeap.ichored) {

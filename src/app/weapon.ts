@@ -1,5 +1,6 @@
 export class Weapon {
   potential: number;
   basePotential: number;
-  enhancement: number;
+  enhancement?: number;
+  ichored?: boolean;
 }
